@@ -43,14 +43,22 @@
       border: none;
       outline: none;
       padding: 16px 40px;
-      background: orange;
+      background: rgb(244, 199, 244);
       color: black;
       font-weight: bold;
       cursor: pointer;
       border-radius: 40px;
       transition: transform 220ms ease-in-out;
       &:hover {
-        transform: scale(103%);
+        background-color: orange;
+        /* Firefox */
+        -moz-transition: all 220ms ease-in;
+        /* WebKit */
+        -webkit-transition: all 220ms ease-in;
+        /* Opera */
+        -o-transition: all 220ms ease-in;
+        /* Standard */
+        transition: all 220ms ease-in;
       }
     }
   }
@@ -75,7 +83,8 @@
       color: grey;
       text-decoration: line-through;
       &::before {
-        background-color: orange;
+        transition: background-color 400ms linear;
+        background-color: rgb(244, 199, 244);
       }
     }
     span {

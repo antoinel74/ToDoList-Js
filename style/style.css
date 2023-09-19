@@ -45,7 +45,7 @@
   border: none;
   outline: none;
   padding: 16px 40px;
-  background: orange;
+  background: rgb(244, 199, 244);
   color: black;
   font-weight: bold;
   cursor: pointer;
@@ -53,7 +53,12 @@
   transition: transform 220ms ease-in-out;
 }
 .todo .row .add_btn:hover {
-  transform: scale(103%);
+  background-color: orange;
+  /* Firefox */
+  /* WebKit */
+  /* Opera */
+  /* Standard */
+  transition: all 220ms ease-in;
 }
 .todo ul li {
   list-style: none;
@@ -80,7 +85,8 @@
   text-decoration: line-through;
 }
 .todo ul li.checked::before {
-  background-color: orange;
+  transition: background-color 400ms linear;
+  background-color: rgb(244, 199, 244);
 }
 .todo ul li span {
   position: absolute;
